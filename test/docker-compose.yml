@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+
+  chatgpt-for-chatbot-wechat:
+    image: whatwewant/registry:${SERVICE_CHATGPT_FOR_CHATBOT_WECHAT_IMAGE_VERSION}
+    environment:
+      CHATGPT_API_KEY: ${SERVICE_CHATGPT_FOR_CHATBOT_WECHAT_CHATGPT_API_KEY}
+
+networks:
+  default:
+    external: true
+    name: compose-ingress
